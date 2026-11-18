@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#141815">
+    <meta name="description" content="A quick visual guide to the Taskmaster contestants from Series 1 through 22.">
+    <title>Taskmaster Cast · Series 1–22</title>
+    <link rel="preconnect" href="https://upload.wikimedia.org">
+    <link rel="stylesheet" href="../styles.css">
+    <script defer src="../data.js"></script>
+    <script defer src="../app.js"></script>
+  </head>
+  <body data-series="15" data-base="../">
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="../" aria-label="Taskmaster Cast, all series">
+          <span class="brand-mark" aria-hidden="true">TM</span>
+          <span class="brand-name">TASKMASTER<span>CAST</span></span>
+        </a>
+        <div class="picker-wrap">
+          <label for="series-search">Jump to a series or contestant</label>
+          <div class="combobox">
+            <input id="series-search" type="search" role="combobox" aria-autocomplete="list" aria-controls="search-results" aria-expanded="false" autocomplete="off" placeholder="Search series or name…">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <div id="search-results" class="search-results" role="listbox" hidden></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="intro">
+        <div class="intro-topline"><span class="red-rule"></span> THE CAST, IN ORDER</div>
+        <h1 id="page-title"></h1>
+        <p id="page-description"></p>
+        <a id="all-series-link" class="back-link" href="../" hidden>← All series</a>
+      </div>
+      <div id="series-list" class="series-list"></div>
+    </main>
+
+    <footer class="site-footer">
+      <span>Unofficial Taskmaster cast guide.</span>
+      <span>Portraits load from Wikipedia where a freely licensed image is available.</span>
+    </footer>
+  </body>
+</html>
