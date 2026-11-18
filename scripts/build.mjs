@@ -12,6 +12,7 @@ const template = await readFile(path.join(root, 'src/index.html'), 'utf8');
 await mkdir(dist, { recursive: true });
 await cp(path.join(root, 'src/styles.css'), path.join(dist, 'styles.css'));
 await cp(path.join(root, 'src/app.js'), path.join(dist, 'app.js'));
+await cp(path.join(root, 'src/favicon.svg'), path.join(dist, 'favicon.svg'));
 await cp(path.join(root, 'src/assets'), path.join(dist, 'assets'), { recursive: true });
 await writeFile(path.join(dist, 'data.js'), `window.TM_SERIES = ${JSON.stringify(lineup)};\n`);
 await writeFile(path.join(dist, 'index.html'), template.replaceAll('{{BASE}}', '').replaceAll('{{SERIES}}', ''));
