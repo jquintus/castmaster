@@ -33,8 +33,6 @@
       const card = document.createElement('a');
       card.className = 'person-card';
       card.href = `https://en.wikipedia.org/wiki/${encodeURIComponent(person.wikiTitle.replaceAll(' ', '_'))}`;
-      card.target = '_blank';
-      card.rel = 'noopener noreferrer';
       card.setAttribute('aria-label', `${person.name}, Wikipedia`);
       const portrait = document.createElement('div');
       portrait.className = 'portrait';

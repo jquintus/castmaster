@@ -85,15 +85,18 @@
       },
       {
         "name": "Joe Lycett",
-        "wikiTitle": "Joe Lycett"
+        "wikiTitle": "Joe Lycett",
+        "image": "assets/joe-lycett.png"
       },
       {
         "name": "Lolly Adefope",
-        "wikiTitle": "Lolly Adefope"
+        "wikiTitle": "Lolly Adefope",
+        "image": "assets/lolly-adefope.png"
       },
       {
         "name": "Mel Giedroyc",
-        "wikiTitle": "Mel Giedroyc"
+        "wikiTitle": "Mel Giedroyc",
+        "image": "assets/mel-giedroyc.png"
       },
       {
         "name": "Noel Fielding",
@@ -139,7 +142,8 @@
       },
       {
         "name": "Liza Tarbuck",
-        "wikiTitle": "Liza Tarbuck"
+        "wikiTitle": "Liza Tarbuck",
+        "image": "assets/liza-tarbuck.png"
       },
       {
         "name": "Russell Howard",
