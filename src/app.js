@@ -2,6 +2,7 @@
   const allSeries = window.TM_SERIES;
   const lastSeries = allSeries.at(-1).series;
   const base = document.body.dataset.base;
+  const version = document.body.dataset.version;
   const selected = Number(document.body.dataset.series || 0);
   const visibleSeries = selected ? allSeries.filter(item => item.series === selected) : allSeries;
   const title = document.getElementById('page-title');
@@ -44,7 +45,7 @@
       portrait.append(initials);
       if (person.image) {
         const img = document.createElement('img');
-        img.src = person.image.startsWith('https://') ? person.image : `${base}${person.image}`;
+        img.src = person.image.startsWith('https://') ? person.image : `${base}${person.image}?v=${version}`;
         img.alt = '';
         img.loading = 'lazy';
         img.decoding = 'async';
