@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#141815">
-    <meta name="description" content="A quick visual guide to the Taskmaster contestants from Series 1 through 22.">
-    <title>Castmaster · Series 1–22</title>
+    <meta name="description" content="A quick visual guide to the Taskmaster contestants from Series 1 through {{LAST_SERIES}}.">
+    <title>Castmaster · Series 1–{{LAST_SERIES}}</title>
     <link rel="icon" href="{{BASE}}favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://upload.wikimedia.org">
     <link rel="stylesheet" href="{{BASE}}styles.css">
@@ -34,7 +34,6 @@
       <div class="intro">
         <div class="intro-topline"><span class="red-rule"></span> THE CAST, IN ORDER</div>
         <h1 id="page-title"></h1>
-        <p id="page-description"></p>
         <a id="all-series-link" class="back-link" href="{{BASE}}" hidden>← All series</a>
       </div>
       <div id="series-list" class="series-list"></div>

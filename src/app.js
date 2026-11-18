@@ -1,17 +1,14 @@
 (() => {
   const allSeries = window.TM_SERIES;
+  const lastSeries = allSeries.at(-1).series;
   const base = document.body.dataset.base;
   const selected = Number(document.body.dataset.series || 0);
   const visibleSeries = selected ? allSeries.filter(item => item.series === selected) : allSeries;
   const title = document.getElementById('page-title');
-  const description = document.getElementById('page-description');
   const backLink = document.getElementById('all-series-link');
 
   title.textContent = selected ? `Series ${selected}` : 'Every contestant.';
-  description.textContent = selected
-    ? `The five contestants from Taskmaster Series ${selected}. Select a portrait or name to open their Wikipedia page.`
-    : 'Series 1–22, all in one place. Select a series heading to see just its five contestants, or search above to jump straight there.';
-  document.title = selected ? `Series ${selected} · Castmaster` : 'Castmaster · Series 1–22';
+  document.title = selected ? `Series ${selected} · Castmaster` : `Castmaster · Series 1–${lastSeries}`;
   backLink.hidden = !selected;
 
   const list = document.getElementById('series-list');
@@ -29,6 +26,7 @@
     count.className = 'series-count';
     count.textContent = 'FIVE CONTESTANTS';
     head.append(heading, count);
+    head.hidden = !!selected;
     const grid = document.createElement('div');
     grid.className = 'cast-grid';
     for (const person of group.contestants) {

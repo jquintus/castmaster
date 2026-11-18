@@ -4,7 +4,7 @@ A static, dependency-free cast directory for Taskmaster UK Series 1–22. The ho
 
 ## Update every six months
 
-Edit `lineups.json`, then run:
+Add the next series to `lineups.json` (five names and Wikipedia article titles), then run:
 
 ```sh
 node scripts/build.mjs

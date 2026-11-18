@@ -5,10 +5,10 @@ import path from 'node:path';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'docs');
 const lineup = JSON.parse(await readFile(path.join(root, 'lineups.json'), 'utf8'));
-if (lineup.length !== 22 || lineup.some((group, index) => group.series !== index + 1 || group.contestants.length !== 5)) {
-  throw new Error('Expected Series 1–22 with five contestants each');
+if (!lineup.length || lineup.some((group, index) => group.series !== index + 1 || group.contestants.length !== 5)) {
+  throw new Error('Expected consecutive series starting at 1, each with five contestants');
 }
-const template = await readFile(path.join(root, 'src/index.html'), 'utf8');
+const template = (await readFile(path.join(root, 'src/index.html'), 'utf8')).replaceAll('{{LAST_SERIES}}', String(lineup.at(-1).series));
 await mkdir(dist, { recursive: true });
 await cp(path.join(root, 'src/styles.css'), path.join(dist, 'styles.css'));
 await cp(path.join(root, 'src/app.js'), path.join(dist, 'app.js'));
