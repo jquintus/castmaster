@@ -162,7 +162,8 @@
     "contestants": [
       {
         "name": "James Acaster",
-        "wikiTitle": "James Acaster"
+        "wikiTitle": "James Acaster",
+        "image": "assets/james-acaster.png"
       },
       {
         "name": "Jessica Knappett",
