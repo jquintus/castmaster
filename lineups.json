@@ -100,7 +100,8 @@
       },
       {
         "name": "Noel Fielding",
-        "wikiTitle": "Noel Fielding"
+        "wikiTitle": "Noel Fielding",
+        "image": "assets/noel-fielding.png"
       }
     ]
   },
@@ -125,7 +126,8 @@
       },
       {
         "name": "Sally Phillips",
-        "wikiTitle": "Sally Phillips"
+        "wikiTitle": "Sally Phillips",
+        "image": "assets/sally-phillips.png"
       }
     ]
   },
