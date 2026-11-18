@@ -192,23 +192,33 @@
     "contestants": [
       {
         "name": "Iain Stirling",
-        "wikiTitle": "Iain Stirling"
+        "wikiTitle": "Iain Stirling",
+        "image": "assets/fandom/early/iain-stirling.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Iain_Stirling"
       },
       {
         "name": "Joe Thomas",
-        "wikiTitle": "Joe Thomas (actor)"
+        "wikiTitle": "Joe Thomas (actor)",
+        "image": "assets/fandom/early/joe-thomas.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Joe_Thomas"
       },
       {
         "name": "Lou Sanders",
-        "wikiTitle": "Lou Sanders"
+        "wikiTitle": "Lou Sanders",
+        "image": "assets/fandom/early/lou-sanders.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Lou_Sanders"
       },
       {
         "name": "Paul Sinha",
-        "wikiTitle": "Paul Sinha"
+        "wikiTitle": "Paul Sinha",
+        "image": "assets/fandom/early/paul-sinha.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Paul_Sinha"
       },
       {
         "name": "Sian Gibson",
-        "wikiTitle": "Sian Gibson"
+        "wikiTitle": "Sian Gibson",
+        "image": "assets/fandom/early/sian-gibson.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Sian_Gibson"
       }
     ]
   },
@@ -217,7 +227,9 @@
     "contestants": [
       {
         "name": "David Baddiel",
-        "wikiTitle": "David Baddiel"
+        "wikiTitle": "David Baddiel",
+        "image": "assets/fandom/early/david-baddiel.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/David_Baddiel"
       },
       {
         "name": "Ed Gamble",
@@ -230,11 +242,14 @@
       {
         "name": "Katy Wix",
         "wikiTitle": "Katy Wix",
-        "image": "assets/katy-wix.png"
+        "image": "assets/fandom/early/katy-wix.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Katy_Wix"
       },
       {
         "name": "Rose Matafeo",
-        "wikiTitle": "Rose Matafeo"
+        "wikiTitle": "Rose Matafeo",
+        "image": "assets/fandom/early/rose-matafeo.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Rose_Matafeo"
       }
     ]
   },
@@ -243,23 +258,33 @@
     "contestants": [
       {
         "name": "Daisy May Cooper",
-        "wikiTitle": "Daisy May Cooper"
+        "wikiTitle": "Daisy May Cooper",
+        "image": "assets/fandom/early/daisy-may-cooper.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Daisy_May_Cooper"
       },
       {
         "name": "Johnny Vegas",
-        "wikiTitle": "Johnny Vegas"
+        "wikiTitle": "Johnny Vegas",
+        "image": "assets/fandom/early/johnny-vegas.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Johnny_Vegas"
       },
       {
         "name": "Katherine Parkinson",
-        "wikiTitle": "Katherine Parkinson"
+        "wikiTitle": "Katherine Parkinson",
+        "image": "assets/fandom/early/katherine-parkinson.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Katherine_Parkinson"
       },
       {
         "name": "Mawaan Rizwan",
-        "wikiTitle": "Mawaan Rizwan"
+        "wikiTitle": "Mawaan Rizwan",
+        "image": "assets/fandom/early/mawaan-rizwan.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Mawaan_Rizwan"
       },
       {
         "name": "Richard Herring",
-        "wikiTitle": "Richard Herring"
+        "wikiTitle": "Richard Herring",
+        "image": "assets/fandom/early/richard-herring.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Richard_Herring"
       }
     ]
   },
@@ -300,7 +325,9 @@
       },
       {
         "name": "Desiree Burch",
-        "wikiTitle": "Desiree Burch"
+        "wikiTitle": "Desiree Burch",
+        "image": "assets/fandom/early/desiree-burch.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Desiree_Burch"
       },
       {
         "name": "Guz Khan",
@@ -313,7 +340,9 @@
       },
       {
         "name": "Victoria Coren Mitchell",
-        "wikiTitle": "Victoria Coren Mitchell"
+        "wikiTitle": "Victoria Coren Mitchell",
+        "image": "assets/fandom/early/victoria-coren-mitchell.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Victoria_Coren_Mitchell"
       }
     ]
   },
@@ -326,7 +355,9 @@
       },
       {
         "name": "Bridget Christie",
-        "wikiTitle": "Bridget Christie"
+        "wikiTitle": "Bridget Christie",
+        "image": "assets/fandom/early/bridget-christie.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Bridget_Christie"
       },
       {
         "name": "Chris Ramsey",
@@ -335,7 +366,9 @@
       },
       {
         "name": "Judi Love",
-        "wikiTitle": "Judi Love"
+        "wikiTitle": "Judi Love",
+        "image": "assets/fandom/early/judi-love.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Judi_Love"
       },
       {
         "name": "Sophie Duker",
@@ -348,17 +381,21 @@
     "contestants": [
       {
         "name": "Dara Ó Briain",
-        "wikiTitle": "Dara Ó Briain"
+        "wikiTitle": "Dara Ó Briain",
+        "image": "assets/fandom/early/dara-o-briain.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Dara_%C3%93_Briain"
       },
       {
         "name": "Fern Brady",
         "wikiTitle": "Fern Brady",
-        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Fern_Brady.jpg/960px-Fern_Brady.jpg",
-        "imageCredit": "https://commons.wikimedia.org/wiki/File:Fern_Brady.jpg"
+        "image": "assets/fandom/early/fern-brady.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Fern_Brady"
       },
       {
         "name": "John Kearns",
-        "wikiTitle": "John Kearns"
+        "wikiTitle": "John Kearns",
+        "image": "assets/fandom/early/john-kearns.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/John_Kearns"
       },
       {
         "name": "Munya Chawawa",
@@ -366,7 +403,9 @@
       },
       {
         "name": "Sarah Millican",
-        "wikiTitle": "Sarah Millican"
+        "wikiTitle": "Sarah Millican",
+        "image": "assets/fandom/early/sarah-millican.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Sarah_Millican"
       }
     ]
   },
@@ -375,15 +414,21 @@
     "contestants": [
       {
         "name": "Frankie Boyle",
-        "wikiTitle": "Frankie Boyle"
+        "wikiTitle": "Frankie Boyle",
+        "image": "assets/fandom/late/frankie-boyle.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Frankie_Boyle"
       },
       {
         "name": "Ivo Graham",
-        "wikiTitle": "Ivo Graham"
+        "wikiTitle": "Ivo Graham",
+        "image": "assets/fandom/late/ivo-graham.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Ivo_Graham"
       },
       {
         "name": "Jenny Eclair",
-        "wikiTitle": "Jenny Eclair"
+        "wikiTitle": "Jenny Eclair",
+        "image": "assets/fandom/late/jenny-eclair.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Jenny_Eclair"
       },
       {
         "name": "Kiell Smith-Bynoe",
@@ -391,7 +436,9 @@
       },
       {
         "name": "Mae Martin",
-        "wikiTitle": "Mae Martin"
+        "wikiTitle": "Mae Martin",
+        "image": "assets/fandom/late/mae-martin.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Mae_Martin"
       }
     ]
   },
@@ -400,7 +447,9 @@
     "contestants": [
       {
         "name": "Julian Clary",
-        "wikiTitle": "Julian Clary"
+        "wikiTitle": "Julian Clary",
+        "image": "assets/fandom/late/julian-clary.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Julian_Clary"
       },
       {
         "name": "Lucy Beaumont",
@@ -409,15 +458,21 @@
       },
       {
         "name": "Sam Campbell",
-        "wikiTitle": "Sam Campbell (comedian)"
+        "wikiTitle": "Sam Campbell (comedian)",
+        "image": "assets/fandom/late/sam-campbell.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Sam_Campbell"
       },
       {
         "name": "Sue Perkins",
-        "wikiTitle": "Sue Perkins"
+        "wikiTitle": "Sue Perkins",
+        "image": "assets/fandom/late/sue-perkins.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Sue_Perkins"
       },
       {
         "name": "Susan Wokoma",
-        "wikiTitle": "Susan Wokoma"
+        "wikiTitle": "Susan Wokoma",
+        "image": "assets/fandom/late/susan-wokoma.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Susan_Wokoma"
       }
     ]
   },
@@ -430,7 +485,9 @@
       },
       {
         "name": "John Robins",
-        "wikiTitle": "John Robins (comedian)"
+        "wikiTitle": "John Robins (comedian)",
+        "image": "assets/fandom/late/john-robins.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/John_Robins"
       },
       {
         "name": "Nick Mohammed",
@@ -439,11 +496,14 @@
       {
         "name": "Sophie Willan",
         "wikiTitle": "Sophie Willan",
-        "image": "assets/sophie-willan.png"
+        "image": "assets/fandom/late/sophie-willan.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Sophie_Willan"
       },
       {
         "name": "Steve Pemberton",
-        "wikiTitle": "Steve Pemberton"
+        "wikiTitle": "Steve Pemberton",
+        "image": "assets/fandom/late/steve-pemberton.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Steve_Pemberton"
       }
     ]
   },
@@ -452,7 +512,9 @@
     "contestants": [
       {
         "name": "Andy Zaltzman",
-        "wikiTitle": "Andy Zaltzman"
+        "wikiTitle": "Andy Zaltzman",
+        "image": "assets/fandom/late/andy-zaltzman.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Andy_Zaltzman"
       },
       {
         "name": "Babatunde Aléshé",
@@ -469,7 +531,9 @@
       },
       {
         "name": "Rosie Jones",
-        "wikiTitle": "Rosie Jones"
+        "wikiTitle": "Rosie Jones",
+        "image": "assets/fandom/late/rosie-jones.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Rosie_Jones"
       }
     ]
   },
@@ -482,11 +546,15 @@
       },
       {
         "name": "Jason Mantzoukas",
-        "wikiTitle": "Jason Mantzoukas"
+        "wikiTitle": "Jason Mantzoukas",
+        "image": "assets/fandom/late/jason-mantzoukas.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Jason_Mantzoukas"
       },
       {
         "name": "Mathew Baynton",
-        "wikiTitle": "Mathew Baynton"
+        "wikiTitle": "Mathew Baynton",
+        "image": "assets/fandom/late/mathew-baynton.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Mathew_Baynton"
       },
       {
         "name": "Rosie Ramsey",
@@ -503,11 +571,15 @@
     "contestants": [
       {
         "name": "Ania Magliano",
-        "wikiTitle": "Ania Magliano"
+        "wikiTitle": "Ania Magliano",
+        "image": "assets/fandom/late/ania-magliano.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Ania_Magliano"
       },
       {
         "name": "Maisie Adam",
-        "wikiTitle": "Maisie Adam"
+        "wikiTitle": "Maisie Adam",
+        "image": "assets/fandom/late/maisie-adam.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Maisie_Adam"
       },
       {
         "name": "Phil Ellis",
@@ -515,7 +587,9 @@
       },
       {
         "name": "Reece Shearsmith",
-        "wikiTitle": "Reece Shearsmith"
+        "wikiTitle": "Reece Shearsmith",
+        "image": "assets/fandom/late/reece-shearsmith.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Reece_Shearsmith"
       },
       {
         "name": "Sanjeev Bhaskar",
@@ -541,7 +615,9 @@
       },
       {
         "name": "Joel Dommett",
-        "wikiTitle": "Joel Dommett"
+        "wikiTitle": "Joel Dommett",
+        "image": "assets/fandom/late/joel-dommett.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Joel_Dommett"
       },
       {
         "name": "Kumail Nanjiani",
@@ -559,7 +635,9 @@
       },
       {
         "name": "Isy Suttie",
-        "wikiTitle": "Isy Suttie"
+        "wikiTitle": "Isy Suttie",
+        "image": "assets/fandom/late/isy-suttie.webp",
+        "imageSource": "https://taskmaster.fandom.com/wiki/Isy_Suttie"
       },
       {
         "name": "Matt Lucas",
