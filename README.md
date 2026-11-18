@@ -1,4 +1,4 @@
-# Taskmaster Cast
+# Castmaster
 
 A static, dependency-free cast directory for Taskmaster UK Series 1–22. The home page shows all contestants in series order. Each series has its own page at `series_1/` through `series_22/`. The header search accepts series numbers and contestant names, and contestant cards link to Wikipedia.
 

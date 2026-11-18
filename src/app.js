@@ -11,7 +11,7 @@
   description.textContent = selected
     ? `The five contestants from Taskmaster Series ${selected}. Select a portrait or name to open their Wikipedia page.`
     : 'Series 1–22, all in one place. Select a series heading to see just its five contestants, or search above to jump straight there.';
-  document.title = selected ? `Series ${selected} · Taskmaster Cast` : 'Taskmaster Cast · Series 1–22';
+  document.title = selected ? `Series ${selected} · Castmaster` : 'Castmaster · Series 1–22';
   backLink.hidden = !selected;
 
   const list = document.getElementById('series-list');
