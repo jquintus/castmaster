@@ -4,7 +4,8 @@
     "contestants": [
       {
         "name": "Frank Skinner",
-        "wikiTitle": "Frank Skinner"
+        "wikiTitle": "Frank Skinner",
+        "image": "assets/frank-skinner.jpeg"
       },
       {
         "name": "Josh Widdicombe",
