@@ -53,7 +53,11 @@ await cp(path.join(root, 'src/app.js'), path.join(dist, 'app.js'));
 await cp(path.join(root, 'src/favicon.svg'), path.join(dist, 'favicon.svg'));
 await cp(path.join(root, 'src/assets'), path.join(dist, 'assets'), { recursive: true });
 await writeFile(path.join(dist, 'data.js'), `window.TM_SHOWS = ${JSON.stringify(shows)};\n`);
-const render = (base, show, season = '') => template.replaceAll('{{BASE}}', base).replaceAll('{{SHOW}}', show).replaceAll('{{SEASON}}', String(season));
+const render = (base, show, season = '') => template
+  .replaceAll('{{BASE}}', base)
+  .replaceAll('{{SHOW}}', show)
+  .replaceAll('{{SEASON}}', String(season))
+  .replaceAll('{{SEARCH_LABEL}}', `Search ${show === 'uk' ? 'series' : 'seasons'} and contestants`);
 await writeFile(path.join(dist, 'index.html'), render('', 'uk'));
 for (const group of lineup) {
   const folder = path.join(dist, `series_${group.series}`);
