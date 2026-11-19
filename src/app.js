@@ -77,6 +77,7 @@
 
   const input = document.getElementById('series-search');
   const results = document.getElementById('search-results');
+  const showDisclosure = document.querySelector('.show-disclosure');
   const searchDisclosure = document.querySelector('.search-disclosure');
   const searchToggle = searchDisclosure.querySelector('summary');
   const choices = Object.entries(shows).flatMap(([slug, entry]) => [
@@ -141,8 +142,14 @@
   }
   input.addEventListener('focus', update);
   input.addEventListener('input', update);
+  showDisclosure.addEventListener('toggle', () => {
+    if (showDisclosure.open) searchDisclosure.open = false;
+  });
   searchDisclosure.addEventListener('toggle', () => {
-    if (searchDisclosure.open) input.focus();
+    if (searchDisclosure.open) {
+      showDisclosure.open = false;
+      input.focus();
+    }
     else close();
   });
   input.addEventListener('keydown', event => {
@@ -164,8 +171,15 @@
     }
   });
   document.addEventListener('pointerdown', event => {
+    if (!showDisclosure.contains(event.target)) showDisclosure.open = false;
     if (!searchDisclosure.contains(event.target)) searchDisclosure.open = false;
     else if (!event.target.closest('.combobox')) close();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && showDisclosure.open) {
+      showDisclosure.open = false;
+      showDisclosure.querySelector('summary').focus();
+    }
   });
 
   // Load only cards approaching the viewport. Names and links remain usable if Wikimedia is unavailable.

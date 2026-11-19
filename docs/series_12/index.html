@@ -8,22 +8,27 @@
     <title>Castmaster</title>
     <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://upload.wikimedia.org">
-    <link rel="stylesheet" href="../styles.css?v=4d6bff69af">
-    <script defer src="../data.js?v=4d6bff69af"></script>
-    <script defer src="../app.js?v=4d6bff69af"></script>
+    <link rel="stylesheet" href="../styles.css?v=652e5e7dac">
+    <script defer src="../data.js?v=652e5e7dac"></script>
+    <script defer src="../app.js?v=652e5e7dac"></script>
   </head>
-  <body data-show="uk" data-season="12" data-base="../" data-version="4d6bff69af">
+  <body data-show="uk" data-season="12" data-base="../" data-version="652e5e7dac">
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="../" aria-label="Castmaster, all series">
           <span class="brand-mark" aria-hidden="true">TM</span>
           <span class="brand-name">CAST<span>MASTER</span></span>
         </a>
-        <nav class="show-nav" aria-label="Shows">
-          <a data-show-link="uk" href="../">UK</a>
-          <a data-show-link="nz" href="../nz/">New Zealand</a>
-          <a data-show-link="au" href="../au/">Australia</a>
-        </nav>
+        <details class="show-disclosure">
+          <summary class="menu-toggle" aria-label="Choose a show">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </summary>
+          <nav class="show-nav" aria-label="Shows">
+            <a data-show-link="uk" href="../">UK</a>
+            <a data-show-link="nz" href="../nz/">New Zealand</a>
+            <a data-show-link="au" href="../au/">Australia</a>
+          </nav>
+        </details>
         <details class="search-disclosure">
           <summary class="search-toggle" aria-label="Search shows, seasons, and contestants">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 5 5"></path></svg>
