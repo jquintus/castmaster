@@ -80,12 +80,10 @@
   const showDisclosure = document.querySelector('.show-disclosure');
   const searchDisclosure = document.querySelector('.search-disclosure');
   const searchToggle = searchDisclosure.querySelector('summary');
-  const choices = Object.entries(shows).flatMap(([slug, entry]) => [
-    { label: `Taskmaster ${entry.name}`, detail: 'Show', slug, season: 0, rank: 0 },
-    ...entry.seasons.flatMap(group => [
-      { label: `${slug === 'uk' ? 'Series' : 'Season'} ${group.season}`, detail: entry.name, slug, season: group.season, rank: 1 },
-      ...group.contestants.map(person => ({ label: person.name, detail: `${entry.name} · ${slug === 'uk' ? 'Series' : 'Season'} ${group.season}`, slug, season: group.season, rank: 2 }))
-    ])
+  input.placeholder = `Search ${seriesName.toLowerCase()} or name…`;
+  const choices = allSeries.flatMap(group => [
+    { label: `${seriesName} ${group.season}`, detail: show.name, season: group.season, rank: 0 },
+    ...group.contestants.map(person => ({ label: person.name, detail: `${seriesName} ${group.season}`, season: group.season, person: person.name, rank: 1 }))
   ]);
   let activeIndex = -1;
   let matches = [];
@@ -97,7 +95,14 @@
     input.removeAttribute('aria-activedescendant');
     activeIndex = -1;
   }
-  function navigate(choice) { window.location.href = choice.season ? seasonPath(choice.slug, choice.season) : showPath(choice.slug); }
+  function navigate(choice) {
+    if (selected && choice.person && choice.season === selected) {
+      const card = [...document.querySelectorAll('.person-card')].find(node => node.querySelector('.person-name').textContent === choice.person);
+      searchDisclosure.open = false;
+      card?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      card?.focus({ preventScroll: true });
+    } else window.location.href = seasonPath(showSlug, choice.season);
+  }
   function paintActive() {
     [...results.querySelectorAll('[role="option"]')].forEach((node, index) => node.setAttribute('aria-selected', String(index === activeIndex)));
     if (activeIndex >= 0) {
@@ -112,7 +117,7 @@
       close();
       return;
     }
-    matches = choices.filter(choice => normalize(choice.label).includes(query) || (choice.rank === 1 && String(choice.season).includes(query)));
+    matches = choices.filter(choice => normalize(choice.label).includes(query));
     matches.sort((a, b) => (a.rank - b.rank) || (a.season - b.season));
     matches = matches.slice(0, 30);
     results.replaceChildren();
@@ -120,7 +125,7 @@
     if (!matches.length) {
       const empty = document.createElement('div');
       empty.className = 'no-results';
-      empty.textContent = 'No matching show, season, or contestant';
+      empty.textContent = `No matching ${seriesName.toLowerCase()} or contestant`;
       results.append(empty);
     } else matches.forEach((choice, index) => {
       const option = document.createElement('button');
