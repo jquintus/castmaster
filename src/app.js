@@ -77,6 +77,8 @@
 
   const input = document.getElementById('series-search');
   const results = document.getElementById('search-results');
+  const searchDisclosure = document.querySelector('.search-disclosure');
+  const searchToggle = searchDisclosure.querySelector('summary');
   const choices = Object.entries(shows).flatMap(([slug, entry]) => [
     { label: `Taskmaster ${entry.name}`, detail: 'Show', slug, season: 0, rank: 0 },
     ...entry.seasons.flatMap(group => [
@@ -104,9 +106,13 @@
   }
   function update() {
     const query = normalize(input.value.trim());
-    matches = choices.filter(choice => !query || normalize(choice.label).includes(query) || (choice.rank === 1 && String(choice.season).includes(query)));
+    if (!query) {
+      matches = [];
+      close();
+      return;
+    }
+    matches = choices.filter(choice => normalize(choice.label).includes(query) || (choice.rank === 1 && String(choice.season).includes(query)));
     matches.sort((a, b) => (a.rank - b.rank) || (a.season - b.season));
-    if (!query) matches = matches.filter(choice => choice.rank <= 1);
     matches = matches.slice(0, 30);
     results.replaceChildren();
     activeIndex = -1;
@@ -135,8 +141,17 @@
   }
   input.addEventListener('focus', update);
   input.addEventListener('input', update);
+  searchDisclosure.addEventListener('toggle', () => {
+    if (searchDisclosure.open) input.focus();
+    else close();
+  });
   input.addEventListener('keydown', event => {
-    if (event.key === 'Escape') return close();
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      searchDisclosure.open = false;
+      searchToggle.focus();
+      return close();
+    }
     if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
       event.preventDefault();
       if (results.hidden) update();
@@ -148,7 +163,10 @@
       navigate(matches[activeIndex < 0 ? 0 : activeIndex]);
     }
   });
-  document.addEventListener('pointerdown', event => { if (!event.target.closest('.combobox')) close(); });
+  document.addEventListener('pointerdown', event => {
+    if (!searchDisclosure.contains(event.target)) searchDisclosure.open = false;
+    else if (!event.target.closest('.combobox')) close();
+  });
 
   // Load only cards approaching the viewport. Names and links remain usable if Wikimedia is unavailable.
   const portraits = [...document.querySelectorAll('.portrait:not([data-fixed-image])')];
