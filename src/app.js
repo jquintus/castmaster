@@ -16,7 +16,7 @@
   const title = document.getElementById('page-title');
   const backLink = document.getElementById('all-series-link');
 
-  title.textContent = selected ? `${seriesName} ${selected}` : showSlug === 'uk' ? 'Every contestant.' : `Taskmaster ${show.name}.`;
+  title.textContent = selected ? `${seriesName} ${selected}` : 'Every contestant.';
   document.title = selected ? `${seriesName} ${selected} · Taskmaster ${show.name} · Castmaster` : `Taskmaster ${show.name} · Castmaster`;
   document.getElementById('intro-label').textContent = `${show.name.toUpperCase()} · THE CAST, IN ORDER`;
   backLink.href = showPath(showSlug);
