@@ -1,28 +1,39 @@
 (() => {
-  const allSeries = window.TM_SERIES;
-  const lastSeries = allSeries.at(-1).series;
+  const shows = window.TM_SHOWS;
+  const showSlug = document.body.dataset.show || 'uk';
+  const show = shows[showSlug];
+  const allSeries = show.seasons;
   const base = document.body.dataset.base;
   const version = document.body.dataset.version;
-  const selected = Number(document.body.dataset.series || 0);
-  const visibleSeries = selected ? allSeries.filter(item => item.series === selected) : allSeries;
+  const selected = Number(document.body.dataset.season || 0);
+  const visibleSeries = selected ? allSeries.filter(item => item.season === selected) : allSeries;
+  const seriesName = showSlug === 'uk' ? 'Series' : 'Season';
+  const showPath = slug => slug === 'uk' ? base : `${base}${slug}/`;
+  const seasonPath = (slug, season) => slug === 'uk' ? `${base}series_${season}/` : `${base}${slug}/season_${season}/`;
+  document.querySelectorAll('[data-show-link]').forEach(link => {
+    if (link.dataset.showLink === showSlug) link.setAttribute('aria-current', 'page');
+  });
   const title = document.getElementById('page-title');
   const backLink = document.getElementById('all-series-link');
 
-  title.textContent = selected ? `Series ${selected}` : 'Every contestant.';
-  document.title = selected ? `Series ${selected} · Castmaster` : `Castmaster · Series 1–${lastSeries}`;
+  title.textContent = selected ? `${seriesName} ${selected}` : showSlug === 'uk' ? 'Every contestant.' : `Taskmaster ${show.name}.`;
+  document.title = selected ? `${seriesName} ${selected} · Taskmaster ${show.name} · Castmaster` : `Taskmaster ${show.name} · Castmaster`;
+  document.getElementById('intro-label').textContent = `${show.name.toUpperCase()} · THE CAST, IN ORDER`;
+  backLink.href = showPath(showSlug);
+  backLink.textContent = `← All ${seriesName.toLowerCase()}s`;
   backLink.hidden = !selected;
 
   const list = document.getElementById('series-list');
   for (const group of visibleSeries) {
     const section = document.createElement('section');
     section.className = 'series-section';
-    section.id = `series_${group.series}`;
+    section.id = `series_${group.season}`;
     const head = document.createElement('div');
     head.className = 'series-head';
     const heading = document.createElement('a');
     heading.className = 'series-heading';
-    heading.href = `${base}series_${group.series}/`;
-    heading.innerHTML = `<span class="series-kicker">${String(group.series).padStart(2, '0')}</span><h2>Series ${group.series}</h2>`;
+    heading.href = seasonPath(showSlug, group.season);
+    heading.innerHTML = `<span class="series-kicker">${String(group.season).padStart(2, '0')}</span><h2>${seriesName} ${group.season}</h2>`;
     const count = document.createElement('span');
     count.className = 'series-count';
     count.textContent = 'FIVE CONTESTANTS';
@@ -33,8 +44,8 @@
     for (const person of group.contestants) {
       const card = document.createElement('a');
       card.className = 'person-card';
-      card.href = `https://en.wikipedia.org/wiki/${encodeURIComponent(person.wikiTitle.replaceAll(' ', '_'))}`;
-      card.setAttribute('aria-label', `${person.name}, Wikipedia`);
+      card.href = person.wikiTitle ? `https://en.wikipedia.org/wiki/${encodeURIComponent(person.wikiTitle.replaceAll(' ', '_'))}` : person.imageSource;
+      card.setAttribute('aria-label', `${person.name}, ${person.wikiTitle ? 'Wikipedia' : 'Taskmaster Wiki'}`);
       const portrait = document.createElement('div');
       portrait.className = 'portrait';
       portrait.dataset.title = person.wikiTitle;
@@ -66,9 +77,12 @@
 
   const input = document.getElementById('series-search');
   const results = document.getElementById('search-results');
-  const choices = allSeries.flatMap(group => [
-    { label: `Series ${group.series}`, detail: 'Series', series: group.series, rank: 0 },
-    ...group.contestants.map(person => ({ label: person.name, detail: `Series ${group.series}`, series: group.series, rank: 1 }))
+  const choices = Object.entries(shows).flatMap(([slug, entry]) => [
+    { label: `Taskmaster ${entry.name}`, detail: 'Show', slug, season: 0, rank: 0 },
+    ...entry.seasons.flatMap(group => [
+      { label: `${slug === 'uk' ? 'Series' : 'Season'} ${group.season}`, detail: entry.name, slug, season: group.season, rank: 1 },
+      ...group.contestants.map(person => ({ label: person.name, detail: `${entry.name} · ${slug === 'uk' ? 'Series' : 'Season'} ${group.season}`, slug, season: group.season, rank: 2 }))
+    ])
   ]);
   let activeIndex = -1;
   let matches = [];
@@ -80,7 +94,7 @@
     input.removeAttribute('aria-activedescendant');
     activeIndex = -1;
   }
-  function navigate(choice) { window.location.href = `${base}series_${choice.series}/`; }
+  function navigate(choice) { window.location.href = choice.season ? seasonPath(choice.slug, choice.season) : showPath(choice.slug); }
   function paintActive() {
     [...results.querySelectorAll('[role="option"]')].forEach((node, index) => node.setAttribute('aria-selected', String(index === activeIndex)));
     if (activeIndex >= 0) {
@@ -90,16 +104,16 @@
   }
   function update() {
     const query = normalize(input.value.trim());
-    matches = choices.filter(choice => !query || normalize(choice.label).includes(query) || (choice.rank === 0 && String(choice.series).includes(query)));
-    matches.sort((a, b) => (a.rank - b.rank) || (a.series - b.series));
-    if (!query) matches = matches.filter(choice => choice.rank === 0);
+    matches = choices.filter(choice => !query || normalize(choice.label).includes(query) || (choice.rank === 1 && String(choice.season).includes(query)));
+    matches.sort((a, b) => (a.rank - b.rank) || (a.season - b.season));
+    if (!query) matches = matches.filter(choice => choice.rank <= 1);
     matches = matches.slice(0, 30);
     results.replaceChildren();
     activeIndex = -1;
     if (!matches.length) {
       const empty = document.createElement('div');
       empty.className = 'no-results';
-      empty.textContent = 'No matching series or contestant';
+      empty.textContent = 'No matching show, season, or contestant';
       results.append(empty);
     } else matches.forEach((choice, index) => {
       const option = document.createElement('button');

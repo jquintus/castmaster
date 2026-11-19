@@ -1,0 +1,96 @@
+{
+  "nz": {
+    "name": "New Zealand",
+    "seasons": [
+      [
+        "Angella Dravid",
+        "Brynley Stent",
+        "Guy Williams",
+        "Leigh Hart",
+        "Madeleine Sami"
+      ],
+      [
+        "David Correos",
+        "Guy Montgomery",
+        "Laura Daniel",
+        "Matt Heath",
+        "Urzila Carlson"
+      ],
+      [
+        "Chris Parker",
+        "Josh Thomson",
+        "Justine Smith",
+        "Kura Forrester",
+        "Paul Ego"
+      ],
+      [
+        "Bubbah",
+        "Dai Henwood",
+        "Karen O'Leary",
+        "Melanie Bracewell",
+        "Ray O'Leary"
+      ],
+      [
+        "Abby Howells",
+        "Ben Hurley",
+        "Hayley Sproull",
+        "Tofiga Fepulea'i",
+        "Tom Sainsbury"
+      ],
+      [
+        "Alice Snedden",
+        "Bree Tomasel",
+        "Jack Ansett",
+        "Jackie van Beek",
+        "Pax Assadi"
+      ],
+      [
+        "David Fane",
+        "Hoani Hotene",
+        "Morgana O'Reilly",
+        "Rhys Mathewson",
+        "Rose Matafeo"
+      ]
+    ]
+  },
+  "au": {
+    "name": "Australia",
+    "seasons": [
+      [
+        "Danielle Walker",
+        "Jimmy Rees",
+        "Julia Morris",
+        "Luke McGregor",
+        "Nina Oyama"
+      ],
+      [
+        "Anne Edmonds",
+        "Jenny Tian",
+        "Josh Thomas",
+        "Lloyd Langford",
+        "Wil Anderson"
+      ],
+      [
+        "Aaron Chen",
+        "Concetta Caristo",
+        "Mel Buttle",
+        "Peter Helliar",
+        "Rhys Nicholson"
+      ],
+      [
+        "Dave Hughes",
+        "Emma Holland",
+        "Lisa McCune",
+        "Takashi Wakasugi",
+        "Tommy Little"
+      ],
+      [
+        "Anisa Nandaula",
+        "Brett Blake",
+        "Celia Pacquola",
+        "Joel Creasey",
+        "Rove McManus"
+      ]
+    ]
+  }
+}

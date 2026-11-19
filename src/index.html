@@ -4,25 +4,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#141815">
-    <meta name="description" content="A quick visual guide to the Taskmaster contestants from Series 1 through {{LAST_SERIES}}.">
-    <title>Castmaster · Series 1–{{LAST_SERIES}}</title>
+    <meta name="description" content="A visual guide to the Taskmaster contestants from the UK, New Zealand, and Australia.">
+    <title>Castmaster</title>
     <link rel="icon" href="{{BASE}}favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://upload.wikimedia.org">
     <link rel="stylesheet" href="{{BASE}}styles.css?v={{VERSION}}">
     <script defer src="{{BASE}}data.js?v={{VERSION}}"></script>
     <script defer src="{{BASE}}app.js?v={{VERSION}}"></script>
   </head>
-  <body data-series="{{SERIES}}" data-base="{{BASE}}" data-version="{{VERSION}}">
+  <body data-show="{{SHOW}}" data-season="{{SEASON}}" data-base="{{BASE}}" data-version="{{VERSION}}">
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="{{BASE}}" aria-label="Castmaster, all series">
           <span class="brand-mark" aria-hidden="true">TM</span>
           <span class="brand-name">CAST<span>MASTER</span></span>
         </a>
+        <nav class="show-nav" aria-label="Shows">
+          <a data-show-link="uk" href="{{BASE}}">UK</a>
+          <a data-show-link="nz" href="{{BASE}}nz/">New Zealand</a>
+          <a data-show-link="au" href="{{BASE}}au/">Australia</a>
+        </nav>
         <div class="picker-wrap">
-          <label for="series-search">Jump to a series or contestant</label>
+          <label for="series-search">Jump to a season or contestant</label>
           <div class="combobox">
-            <input id="series-search" type="search" role="combobox" aria-autocomplete="list" aria-controls="search-results" aria-expanded="false" autocomplete="off" placeholder="Search series or name…">
+            <input id="series-search" type="search" role="combobox" aria-autocomplete="list" aria-controls="search-results" aria-expanded="false" autocomplete="off" placeholder="Search season or name…">
             <span class="search-icon" aria-hidden="true">⌕</span>
             <div id="search-results" class="search-results" role="listbox" hidden></div>
           </div>
@@ -32,9 +37,9 @@
 
     <main id="main">
       <div class="intro">
-        <div class="intro-topline"><span class="red-rule"></span> THE CAST, IN ORDER</div>
+        <div class="intro-topline"><span class="red-rule"></span> <span id="intro-label">THE CAST, IN ORDER</span></div>
         <h1 id="page-title"></h1>
-        <a id="all-series-link" class="back-link" href="{{BASE}}" hidden>← All series</a>
+        <a id="all-series-link" class="back-link" href="{{BASE}}" hidden></a>
       </div>
       <div id="series-list" class="series-list"></div>
     </main>
